@@ -1,0 +1,50 @@
+{% extends "::machouille_layout.html.twig" %} 
+{% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet" href="{{ asset('bundles/machouillesite/css/fruites.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/machouillesite/css/bootstrap.css') }}" />
+{% endblock %} 
+
+{% block title %} Machouille - Gamme Fruité 
+{% endblock %} 
+
+{% block position %}
+<a href=" {{ path ('machouille_site_page_fruites') }}" class="lien_commentaire"> >> Fruités </a>
+{% endblock %} 
+
+{% block body %}
+<div id="body2">
+			<div id="conteneur">
+                <h1> Notre gamme fruité : </h1>
+                
+                <div class="row">
+                	{% for object in list_fruites %}
+                    <div class="col-xs-4">
+                       <div class="image">
+                           <img src="{{ asset('bundles/machouillesite/images/CG1.png') }}"  alt="" class="img_article">
+                       </div>
+                       <div class="footer--article">
+                            <div class="footer--description">
+                            	<a href=" {{ path ('machouille_detail_article', { 'id' : object.reference }) }}">
+                            	<img src="{{ asset('bundles/machouillesite/images/Icone/magnifier13.png') }}" 
+                            	alt="Voir plus"></a>
+                                <span class="article--nom"><strong>{{ object.reference }}: </strong></span>
+                                <span class="article--prix"> {{ object.prix | number_format(2, ',' ,'') }}€/unité</span><br>
+                                <span class="article--description"> {{ object.designation }} </span>
+                            </div>
+                            <div class="footer--panier">
+                                <a href=" {{ path ('machouille_ajout_article', { 'id' : object.reference }) }}" class="btn_panier"></a>
+                            </div>   
+                        </div>
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+                
+                
+            </div>
+            
+            <div style="clear:both"></div>
+       </div>
+{% endblock %}

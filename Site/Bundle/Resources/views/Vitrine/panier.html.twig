@@ -1,0 +1,124 @@
+{% extends "::machouille_layout.html.twig" %} {% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/style_panier.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/bootstrap.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+{% endblock %}
+
+
+
+{% set totalHT = 0 %}
+{% set totalTTC = 0 %}
+
+
+
+{% block title %} 
+	Machouille - Panier
+{% endblock %}
+
+{% block position %}
+<span class="lien_commentaire"> >> Panier </span>
+{% endblock %} 
+
+{% block body %}
+	<div id="body2">
+			<div id="conteneur">
+                
+                
+                {% for flashMessage in app.session.flashbag.get('success') %}
+                	<div class="row">
+                		<div class="msg_supp">
+                			{{ flashMessage }}
+                		</div>
+                	</div>
+                {% endfor %}
+                
+                <h1> Votre panier : </h1>
+                
+                    <div class="row panier--titre">
+                        <div class="col-xs-3">
+                            <span>Références</span>
+                        </div>
+                        <div class="col-xs-3">
+                            <span>Quantité</span>
+                        </div>
+                        <div class="col-xs-2">
+                            <span>Prix unitaire</span>
+                        </div>
+                        <div class="col-xs-2">
+                            <span>Prix HT</span>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                   {% if produits|length == 0 %}
+                   		<div class="col-xs-12" style="text-align :center">
+                   			<span>Aucun article dans votre panier</span>
+                   		</div>
+                   {% endif %} 
+                   	
+                   {% for produit in produits %}
+                    <div class="row fiche--article">
+                        <div class="col-xs-3">
+                            <span>{{ produit.reference }}</span>
+                        </div>
+                        <div class="col-xs-3">
+                        	<form action = " {{ path ('machouille_ajout_article', { 'id' : produit.reference }) }}" method="get">
+                            <select name="qte" onChange="this.form.submit()">
+                            	{% for i in 1..10 %}
+                                	<option value="{{ i }}" 
+                                	{% if i == panier[produit.reference] %}
+                                	 selected="selected" 
+                                	 {% endif %} 
+                                	 > {{ i }}</option>
+                            	{% endfor %}
+                            </select>
+                            </form>
+	                  	</div>
+	                    <div class="col-xs-2">
+	                  		<span>{{ produit.prix | number_format(2, ',' ,'') }}€</span>
+	                    </div>
+	                    <div class="col-xs-1">
+	                     	<span>{{ (produit.prix * panier[produit.reference]) | number_format(2, ',' ,'') }} €</span>
+	                    </div>
+	                    
+	                    <div class="col-xs-1">
+	                    	<a href=" {{ path ('machouille_supprimer_article', { 'id' : produit.reference }) }}" class="btn_suppression"></a>
+	                    </div><br><br>
+                    </div>
+                    
+                    {% set totalHT = totalHT + (produit.prix* panier[produit.reference]) %}
+                    {% set totalTTC = totalTTC + (produit.prix* panier[produit.reference]) %}
+                    {% endfor %}
+                    <hr>
+                    
+                    {% if produits|length != 0 %}
+                    <div class="row">
+                        <div class="col-xs-2" id="panier--facture">
+                            <span class="strong"><strong>Total HT :</strong></span>
+                            	<span> {{ totalHT| number_format(2, ',' ,'') }}€</span><br>
+                           
+                            <span class="strong"><strong>Total :</strong></span>
+                            	<span>{{ totalTTC| number_format(2, ',' ,'') }}€</span>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="btn_valide">
+                            <a href="{{ path('machouille_site_livraison') }}"> Valider mon panier </a>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="row">	 
+                        <div class="col-xs-4 btn_poursuite">
+                            <a href="{{ path('machouille_site_accueil') }}"> Continuer mes achats </a>
+                        </div>
+                    </div>
+            </div>
+            
+            <div style="clear:both"></div>
+       </div>
+{% endblock %}

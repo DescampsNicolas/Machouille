@@ -1,0 +1,103 @@
+{% extends "::machouille_layout.html.twig" %} {% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/livraison.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/bootstrap.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+
+{% endblock %} {% block title %} Machouille - Livraison {% endblock %}
+
+{% block position %}
+<span> >> Livraison  </span>
+{% endblock %} 
+
+{% block body %}
+	 <div id="body2">
+        <div id="conteneur">
+			
+			{% for flashMessage in app.session.flashbag.get('success') %}
+            <div class="row notif">
+                {{ flashMessage }}
+            </div>
+            {%  endfor %}
+            <h1>Livraison</h1>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <span>Sélectionner une adresse de livraison</span>
+                    <span>Sélectionnez ci-dessous l'adresse de votre choix en cliquant sur le bouton 
+                       « Envoyer à cette adresse » correspondant ou
+                       <a href="#" class="new_adress">entrez une nouvelle adresse.</a></span>
+                </div>
+            </div>
+            <div class="row lien_relais">
+                <span><a href="#">Trouvez un point de relai près de chez vous</a></span>
+            </div>
+
+            <hr>
+            <div class="row">
+
+                <div class="col-xs-6 user--adress">
+                    <h3><strong>{{ user.nom }} {{ user.prenom }}</strong></h3>
+                    <br>
+                    <span>{{ user.adresse }}</span>
+                    <br>
+                    <span>{{ user.codepostal }}, {{ user.ville }}</span>
+                    <br>
+                    <span>{{ user.pays }}</span>
+                    <br>
+                    <br>
+
+                    <a href="{{ path('machouille_site_page_paiement') }}" class="btn_adress">Envoyer à cette adresse</a>
+                    <br>
+                    <a href="#" class="btn_modif">Modifier</a>
+                    <a href="#" class="btn_supp">Supprimer</a>
+                </div>
+
+                <div class="col-xs-4">
+                    <h3>Ajouter une nouvelle adresse</h3>
+                    <span>Et cliquer sur "envoyer à cette adresse</span>
+                    <form action="{{ path('machouille_site_modif_adresse') }}" class="form--adress" method="post">
+                        <label for="adress">Nom</label>
+                        <br>
+                        <input type="text" name="ipt_nom">
+                        <br>
+                        <label for="adress">Prenom</label>
+                        <br>
+                        <input type="text" name="ipt_prenom">
+                        <br>
+
+                        <label for="adress">Adresse</label>
+                        <br>
+                        <input type="text" name="ipt_adresse" id="ipt_adress">
+                        <br>
+                        <label for="adress">Ville</label>
+                        <br>
+                        <input type="text" name="ipt_ville" id="ipt_ville">
+                        <br>
+
+                        <label for="adress">Code postal</label>
+                        <br>
+                        <input type="text" name="ipt_codeP">
+                        <br>
+                        <label for="adress">Pays</label>
+                        <br>
+                        <input type="text" name="ipt_pays">
+                        <br>
+
+                        <label for="adress">Telephone</label>
+                        <br>
+                        <input type="text" name="ipt_tel">
+                        <br>
+                        <br>
+
+                        <input type="submit" class="ipt_submit" value="Envoyer à cette adresse">
+                    </form>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+ </div>
+{% endblock %}

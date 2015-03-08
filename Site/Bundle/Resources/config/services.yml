@@ -1,0 +1,10 @@
+parameters:
+
+
+services:
+    redirectionListener:
+        class: Machouille\Site\Bundle\Listener\RedirectionListener
+        arguments: [@service_container, @session]
+        tags: 
+          - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+    

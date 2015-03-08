@@ -1,0 +1,97 @@
+/* BODY 2 */
+
+#body2 {
+	background-image : url('../images/gris2.jpg');
+	background-repeat : repeat-x repeat-y;
+	border-top : 2px solid #aaa;
+	height: auto;
+    font-family: Calibri;
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.notif {
+    margin-top : 15px;
+	text-align : center;
+	height : 40px;
+	color : #367828;
+	background-color : #BCEDA7;
+	line-height:40px;
+	border : 1px solid #367828;
+	border-radius : 5px;
+}
+
+hr {
+    height: 1px;
+    background-color:  #000;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.7);
+}
+
+#body2 h1 {
+    text-align: center;
+}
+
+.bloc--paiement {
+    width : 60%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.mode--paiement {
+    margin-top: 10px;
+}
+
+.mode--carte {
+    margin-top: 40px;
+}
+
+.mode--carte:after {
+    content:url('../images/CB/carte2.gif');
+    position: relative;
+    left : 480px;
+    bottom: 30px;
+}
+
+.mode--carte:before {
+    content:url('../images/CB/carte1.gif');
+    position: relative;
+    left : 540px;
+}
+
+.mode--paypal:after {
+    content:url('../images/CB/carte6.gif');
+    position: relative;
+    left : 540px;
+}
+
+.mode--espece:after {
+    content:url('../images/CB/carte3.gif');
+    position: relative;
+    left : 540px;
+}
+
+.zone--paiement{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn_achat {
+    padding: 10px 20px 10px 20px;
+    background-color: #9ED1D1;
+    border: 2px solid #CCC;
+    -webkit-transition: all 0.3s; /*compatibilité chrome*/
+	-moz-transition: all 0.3s; /*compatibilité firefox*/
+	-o-transition: all 0.3s ease-out; /*compatibilité opéra*/
+	transition: all 0.3s ease-out; /* Autre navigateur */ 
+}
+
+.btn_achat:hover {
+    background-color: black;
+    color: #FFF;
+}

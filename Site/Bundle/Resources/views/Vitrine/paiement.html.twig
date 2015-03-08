@@ -1,0 +1,55 @@
+{% extends "::machouille_layout.html.twig" %} {% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/paiement.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/bootstrap.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+
+{% endblock %} {% block title %} Machouille - Livraison {% endblock %}
+
+{% block position %}
+<span> >> Livraison  </span>
+{% endblock %} 
+
+{% block body %}
+	<div id="body2">
+        <div id="conteneur">
+        
+            
+			{% for flashMessage in app.session.flashbag.get('success') %}
+            <div class="row notif">
+                {{ flashMessage }}
+            </div>
+            {%  endfor %}
+        
+        
+            <h1>Paiement</h1>
+
+            <fieldset class="bloc--paiement">
+                <span>En cliquant sur « Terminer ma commande », j´accepte <a href="#"> les conditions générales de vente. </a></span>
+                <br>
+                <br>
+
+                <input type="checkbox">Je souhaite terminer ma commande et procéder au paiement
+
+                <div class="mode--paiement">
+                    <input type="radio" name="mode" class="mode mode--carte">Paiement sécurisé par carte bleue
+                    <hr>
+                    <input type="radio" name="mode" class="mode mode--paypal">Paiement par compte Paypal
+                    <hr>
+                    <input type="radio" name="mode" class="mode mode--espece">Paiement à l'arrivé
+                    <hr>
+                </div>
+                <br />
+                <div class="zone--paiement">
+                    <a href="#" class="btn_achat"> Terminer ma commande </a>
+                </div>
+            </fieldset>
+
+
+            <div style="clear:both"></div>
+        </div>
+    </div>
+{% endblock %}

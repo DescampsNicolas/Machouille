@@ -1,0 +1,50 @@
+{% extends "::machouille_layout.html.twig" %} {% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/style_connexion.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+{% endblock %} {% block title %} Machouille - Connexion {% endblock %}
+
+{% block position %}
+<a href=" {{ path ('machouille_site_page_connexion') }}"> >> Connexion </a>
+{% endblock %} 
+
+{% block body %}
+	<div id="body2">
+    	<div class="titre_connexion">
+   		  <h1> Connexion </h1>
+        </div>
+    	<div id="conteneur">
+        	<section id="zone_connexion">  	
+				<form id="form_connexion" action="{{ path('machouille_site_verif_ident') }}" method="post">
+            		<div id="zone_pseudo">
+						<div class="lbl_pseudo">
+                   	  		<label for="pseudo"> Votre adresse mail :</label>
+                   		</div>
+                    	<div class="ipt_pseudo">
+                    		<input type="text" id="ipt_pseudo" name="ipt_mail" /><br />
+                   		</div>
+                	</div>
+                
+    				<div id="zone_mdp">
+     	           		<div class="lbl_mdp">
+           	  		  		<label for="mdp"> Votre mot de passe :</label>
+                   		</div>
+                    	<div class="ipt_mdp">
+              	  			<input type="password" id="ipt_mdp" name="ipt_mdp" /><br />
+                  		</div>
+     				</div>
+                    
+                	<div class="zone_lien">
+                  		<a href="{{  path ('machouille_site_page_inscription') }}"> Pas encore inscrit ? </a>
+                	</div>
+                
+                	<div class="zone_btn">     
+                  		<input type="submit" id="btn_valider" value="Valider" />
+                	</div>
+        		</form>
+        	</section>
+   		</div>
+	</div>
+{% endblock %}

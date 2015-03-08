@@ -1,0 +1,56 @@
+{% extends "::machouille_layout.html.twig" %} {% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/style_plan.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+{% endblock %} {% block title %} Machouille - Plan du site {% endblock %}
+
+{% block position %}
+<a href=" {{ path ('machouille_site_plan') }}"> >> Plan </a>
+{% endblock %} 
+
+{% block body %}
+	<div id="body2">
+    	<div class="titre_plan">
+        	<h1> Plan du site </h1>
+        </div>
+		<div id="conteneur">
+			<div class="tree">
+				<ul>
+					<li>
+					<a href=" {{ path ('machouille_site_accueil') }}">Accueil</a>
+						<ul>
+							<li>
+                                <a href="#">ChewingGum</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Fruités</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tri-goûts</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Crémeux</a>
+                                    </li>
+                                </ul> 
+                            </li>
+                            <li>
+                                <a href=" {{ path ('machouille_site_page_commentaire') }}">Avis</a>
+                            </li>
+                            <li>
+                                <a href=" {{ path ('machouille_site_page_inscription') }}">Inscription</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Panier</a>
+                            </li>
+						</ul>
+        			</li>
+    			</ul>
+			</div>
+       	</div>
+   	</div>	
+{% endblock %}

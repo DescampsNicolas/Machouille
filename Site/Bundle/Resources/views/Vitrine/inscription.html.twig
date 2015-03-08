@@ -1,0 +1,143 @@
+{% extends "::machouille_layout.html.twig" %} {% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/style_inscription.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+{% endblock %} {% block title %} Machouille - Inscription {% endblock %}
+
+{% block position %}
+<a href=" {{ path ('machouille_site_page_inscription') }}"> >> Inscription </a>
+{% endblock %} 
+
+{% block body %}
+	<div id="body2">
+		<div class="titre_inscription">
+			<h1>Inscription !</h1>
+		</div>
+		<div id="conteneur">
+			<section id="zone_inscription">
+	
+				<form id="form_inscription" action="{{ path('machouille_site_inscription') }}" method="post">
+					<label for="mail">Entrez votre adresse e-mail : </label>
+	
+					<div id="conteneur_form">
+						<input type="text" tabindex="1" id="ipt_mail" name="ipt_mail"
+							style="width: 200px" />
+	
+						<div id="zone_warning">
+							<p>
+								Créer un compte vous permettra de sécuriser votre commande.<br />
+								Machouille s'engage à garder ces informations strictement
+								confidentielles.
+							</p>
+						</div>
+	
+						<label for="confirm_mail">Confirmez votre email :</label> <br /> <input
+							type="text" tabindex="2" id="ipt_confirm_mail"
+							name="ipt_confirm_mail" style="width: 200px" />
+					</div>
+					<hr />
+	
+					<div id="conteneur_form2">
+						<label for="lbl_civilite"> Votre civilité </label> <br />
+						<div id="civilite">
+							<input type="radio" name="gender" value="Monsieur"> M. 
+							<input type="radio" name="gender" value="Mademoiselle"> Mlle 
+							<input type="radio" name="gender" value="Madame"> Mme
+						</div>
+						<br /> <label for="lbl_prenom"> Votre prénom : </label> <br /> <input
+							type="text" id="ipt_prenom" name="ipt_prenom" tabindex="3" />
+	
+						<div id="zone_nom">
+							<label for="lbl_nom"> Votre nom : </label> <br /> <input
+								type="text" id="ipt_nom" name="ipt_nom" tabindex="4" />
+						</div>
+	
+						<label for="lbl_naissance"> Votre date de naissance : </label> <br />
+						<select name="jour" style="width: 100px" tabindex="5">
+							<option>- Jour - <option>1 <option>2 <option>3
+							<option>4 <option>5 <option>6 <option>7 <option>8 <option>9
+							<option>10<option>11<option>12<option>13<option>14<option>15
+							<option>16<option>17<option>18<option>19<option>20<option>21
+							<option>22<option>23<option>24<option>25<option>26<option>27
+							<option>28<option>29<option>30<option>31</option>	
+						</select> 
+						
+						<select name="mois" style="width: 150px" tabindex="6">
+							<option>- Mois - <option>Janvier<option>Février<option>Mars
+							<option>Avril <option>Mai <option>Juin <option>Juillet
+							<option>Août <option>Septembre <option>Octobre <option>Novembre
+							<option>Décembre</option>
+						</select> 
+						
+						<select name="annee" style="width: 150px" tabindex="7">
+							<option>- Année - <option>2014 <option>2013 <option>2012
+							<option>2011 <option>2010 <option>2009 <option>2008
+							<option>2007 <option>2006 <option>2005 <option>2004
+							<option>2003 <option>2002 <option>2001 <option>2000
+							<option>1999 <option>1998 <option>1997 <option>1996
+							<option>1995 <option>1994 <option>1993 <option>1992
+							<option>1991 <option>1990 <option>1989 <option>1988
+							<option>1987 <option>1986 <option>1985 <option>1984
+							<option>1983 <option>1982 <option>1981 <option>1980
+							<option>1979 <option>1978 <option>1977 <option>1976
+							<option>1975 <option>1974 <option>1973 <option>1972
+							<option>1971 <option>1970 <option>1969 <option>1968
+							<option>1967 <option>1966 <option>1965 <option>1964
+							<option>1963 <option>1962 <option>1961 <option>1960
+							<option>1959 <option>1958 <option>1957 <option>1956
+							<option>1955 <option>1954 <option>1953 <option>1952
+							<option>1951 <option>1950 <option>1949 <option>1948
+							<option>1947 <option>1946 <option>1945 <option>1944
+							<option>1943 <option>1942 <option>1941 <option>1940
+							<option>1939 <option>1938 <option>1937 <option>1936
+							<option>1935 <option>1934 <option>1933 <option>1932
+							<option>1931 <option>1930 <option>1929 <option>1928
+							<option>1927 <option>1926 <option>1925 <option>1924
+							<option>1923 <option>1922 <option>1921 <option>1920
+							</option>
+						</select>
+					</div>
+					<br />
+					<hr />
+	
+					<div id="conteneur_form3">
+						<label for="lbl_adresse"> Votre adresse : </label> <br /> <input
+							type="text" id="ipt_adresse" name="ipt_adresse" tabindex="8"
+							style="width: 500px" /> <br />
+						<br /> <label for="lbl_adresse+"> Complément d'adresse : </label> <br />
+						<input type="text" id="ipt_adresse+" name="ipt_adresse+"
+							tabindex="9" style="width: 500px" /><br />
+						<br /> <label for="lbl_pays"> Votre pays : </label> <br /> 
+						
+						<select name="pays" style="width: 500px" tabindex="10">
+							<option>France <option>Février <option>Mars
+							<option>Avril  <option>Mai	<option>Juin
+							<option>Juillet <option>Août <option>Septembre
+							<option>Octobre <option>Novembre <option>Décembre
+							</option>
+						</select><br />
+						
+						<br /> <label for="lbl_ville"> Votre ville : </label> <br /> <input
+							type="text" id="ipt_ville" name="ipt_ville" tabindex="11" /><br />
+						<br /> <label for="lbl_codeP"> Code postal : </label> <br /> <input
+							type="text" id="ipt_codeP" name="ipt_codeP" tabindex="12" /><br />
+						<br /> <label for="lbl_tel"> Votre téléphone : </label> <br /> <input
+							type="text" id="ipt_tel" name="ipt_tel" tabindex="13" /><br />
+					</div>
+					<hr />
+	
+					<div id="conteneur_form4">
+						<label for="lbl_mdp"> Votre mot de passe : </label><br /> <input
+							type="password" id="ipt_mdp" name="ipt_mdp" tabindex="14" /><br />
+						<br /> <label for="lbl_confirm_mdp"> Confirmation : </label><br />
+						<input type="password" id="ipt_confirm_mdp" name="ipt_confirm_mdp"
+							tabindex="15" /><br /> <br />
+						<br /> <input type="submit" id="btn_envoyer" />
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+{% endblock %} 

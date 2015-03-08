@@ -1,0 +1,95 @@
+{% extends "::machouille_layout.html.twig" %} {% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/style_commentaire.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+{% endblock %}
+
+{% block title %} 
+	Machouille - Avis
+{% endblock %}
+
+{% block position %}
+<a href=" {{ path ('machouille_site_page_commentaire') }} class="lien_commentaire"> >> Commentaire </a>
+{% endblock %} 
+
+{% block body %}
+	 <div id="body2">    
+		<div class="zonetitre_avis">
+			<h1> Machouille s’intéresse grandement à vos avis !</h1>
+       	</div>
+        <div id="conteneur">
+			<section id="titre_avis">	
+			<p> Pour mieux vous servir, pour être au plus proche de vos attentes et de vos goûts, 
+			n’hésitez pas à écrire vos avis ou vos témoignages.
+			Chez <strong>Machouille</strong> nous acceptons aussi bien les <strong> critiques </strong>
+			que les <strong> félicitations</strong> et encouragements !</p>
+ 	 	</section>
+		
+        <div class="zone_formulaire">
+          	<form id="formulaire_commentaire" method="post" action="{{ path('machouille_site_avis') }}">
+               	<div class="zone_id">
+                   	<div class="zone_nom">
+						<label for="nom">Votre nom :</label><br></br>
+						<input type="text" id="ipt_nom" name="ipt_nom" style="width:450px"></input>
+                  	</div>
+                        
+		        	<div class="zone_mail">
+						<label for="mail">Votre mail :</label><br></br>
+                      	<input type="text" name="ipt_mail" style="width:445px"></input>
+                  	</div>
+              	</div>
+                    
+              	<div class="zone_avis">
+                 	<div class="zone_titre">
+                     	<label for="titre">Titre de votre avis :</label><br></br>
+                      	<input type="text" id="ipt_titre" name="ipt_titre" style="width:450px"></input>
+                  	</div>
+                        
+             		<div class="zone_note">
+						<label for="note">Votre note :</label><br></br>
+						<select id="ipt_note" name="ipt_note">
+                                <option> 1 <option> 2 <option> 3 <option> 4 
+                                <option> 5 <option> 5 <option> 6 <option> 7 
+                                <option> 8 <option> 9 <option> 10
+                                </option> 
+                        </select>
+                 	</div>
+        		</div>
+    
+	           	<div class="zone_com">
+					<label for="commentaire">Votre avis</label><br></br>
+                  	<textarea cols=10 rows=6 name="ipt_commentaire"></textarea>
+             	</div>
+                    
+				<div class="zone_btn">
+				    <div class="espace"><p></p></div>
+					<input type="submit" value="Envoyer" id="ipt_envoyer"></input>
+              	</div>
+                    
+      		</form>
+     	 </div>
+        
+        
+       	<section id="zone_avis">
+          	<h1 class="titre_avis"> Avis de nos clients </h1>
+				{% for object in avis %}
+            	<div class="conteneur_avis">
+                    <div class="conteneur_titre">
+                        <h1> {{ object.titre | capitalize }} </h1>
+                        <h2> Note {{ object.note }} / 10</h2>
+                    </div>
+                        <div class="zone_avis">
+                            <div class="guillemet">
+                                <img src="{{ asset('bundles/machouillesite/images/guillemet.png') }}" width="31" class="img_guillement"></img>
+                            </div>
+                            <p> {{ object.avis }}</p>
+                        </div>
+                    <h1 class="nom_auteur"> {{ object.nom | capitalize }} </h1>
+                </div>
+ 				{% endfor %}
+            </section>
+		</div>
+	</div>	
+{% endblock %}

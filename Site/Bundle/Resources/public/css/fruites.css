@@ -1,0 +1,97 @@
+/* BODY 2 */
+
+#body2 {
+	background-image : url('../images/gris2.jpg');
+	background-repeat : repeat-x repeat-y;
+	border-top : 2px solid #aaa;
+	height: auto;
+	font-family : Calibri;
+}
+
+#menu {
+	height : 55px;
+}
+
+#body2 h1 {
+	font-family : Dancing;
+	text-align : center;
+	font-size : 40px;
+	color : #FF3C67;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+
+.lien_commentaire {
+	margin-left : 5px;
+	position : relative;
+	bottom : 1px;
+}
+
+.article1, .article2, .article3 {
+    width : 31.33%;
+    margin-right: 15px;
+    float: left;
+    border: 1px solid #000;
+    
+}
+
+.img_article {
+    display: block;
+    margin-left: auto;
+    margin-right:  auto;
+    padding: 15px;
+}
+
+
+.col-xs-4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    background-color: #FFF;
+    border: 2px solid #AAA;
+    margin-right: 22px;
+}
+
+
+.footer--article {
+    padding: 5px;
+    border-top: 2px solid #000;
+}
+
+
+.footer--description {
+    width: 80%;   
+    float: left;
+}
+
+.footer--panier {
+    width: 19%;
+    height: 50px;
+    display: inline-block;
+    float: left;
+    border: 1px solid #83B1C2;
+    background-color: #A4DEF3;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius : 25%;
+}
+
+.footer-panier a {
+    text-align: center;
+}
+
+.footer--panier a:before {
+    content: url('../images/Icone/shoppingcart.png');
+    position: absolute;
+    margin-left: 8px;
+    margin-top: -0.5px;
+}
+.article--nom {
+    margin-left: 25px;
+    padding-top: 5px;
+}
+
+.article--description {
+    position: relative;
+    top: 10px;
+    font-style: italic;
+}

@@ -1,0 +1,159 @@
+{% extends "::machouille_layout.html.twig" %}
+
+{% block stylesheets %}
+    {# On charge le CSS #}
+    <link rel="stylesheet" href="{{ asset('bundles/machouillesite/css/style_accueil.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/machouillesite/css/layout.css') }}"/>
+{% endblock %}
+
+{% block title %}
+	Machouille - Accueil
+{% endblock %}
+
+{% block position %}
+{% endblock %}
+
+{% block body %}
+	<div id="body2">
+		<div id="conteneur">
+			<div class="zone_formule">
+				<h1>Les formules Machouille</h1>
+				<div class="conteneur_formule">
+					<div class="formule1">
+						<h1>La Fruité</h1>
+						<img src="{{ asset('bundles/machouillesite/images/logo_formule.png') }}" class="logo_mach"></img>
+
+						<div class="prix">
+							<p>1 pack de 500 dragés fruités</p>
+							<p>+</p>
+							<p>1 pack de 100 dragés Tri-goûts</p>
+						</div>
+
+						<a href="#" class="btn_formule1"> Je prends !</a>
+					</div>
+
+					<div class="formule2">
+						<h1>La Tri-Goût</h1>
+						<img src="{{ asset('bundles/machouillesite/images/logo_formule.png') }}" class="logo_mach"></img>
+						<div class="prixTG">
+							<p>1 pack de 500 dragés fruités</p>
+							<p>+</p>
+							<p>1 pack de 100 dragés Tri-goûts</p>
+						</div>
+
+						<a href="#" class="btn_formule2"> Je prends !</a>
+					</div>
+
+					<div class="formule3">
+						<h1>La Spéciale</h1>
+
+						<img src="{{ asset('bundles/machouillesite/images/logo_formule.png') }}"  class="logo_mach"></img>
+						<div class="prixSpéciale">
+							<p>1 pack de 500 dragés fruités</p>
+							<p>+</p>
+							<p>1 pack de 100 dragés Tri-goûts</p>
+						</div>
+
+						<a href="#" class="btn_formule3"> Je prends !</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div id="CG_moment">
+			<h1>Les produits du Moment :</h1>
+			<div id="conteneur">
+				<div class="conteneur_moment">
+					<div class="produit_m1">
+						<img src="{{ asset('bundles/machouillesite/images/CG2.png') }}" class="img_CG1" alt="CG1"></img> <a
+							href="#" class="btn_moment"> Ajouter au panier </a>
+					</div>
+
+					<div class="produit_m2">
+						<img src="{{ asset('bundles/machouillesite/images/CG2.png') }}" class="img_CG1" alt="CG1"></img> <a
+							href="#" class="btn_moment"> Ajouter au panier </a>
+					</div>
+
+					<div class="produit_m3">
+						<img src="{{ asset('bundles/machouillesite/images/CG2.png') }}" class="img_CG1" alt="CG1"></img> <a
+							href="#" class="btn_moment"> Ajouter au panier </a>
+					</div>
+				</div>
+			</div>
+
+			<div id="CG_propose">
+				<h1>En manque d'inspiration ? Nous vous proposons :</h1>
+				<div id="conteneur">
+					<div class="conteneur_produits">
+						<div class="produit_1">
+							<img src="{{ asset('bundles/machouillesite/images/CG1.jpg') }}" class="img_CG2" alt="CG1"></img> <a
+								href="#" class="btn_nouveauté"> Ajouter au panier </a>
+						</div>
+
+						<div class="produit_2">
+							<img src="{{ asset('bundles/machouillesite/images/CG1.jpg') }}" class="img_CG2" alt="CG1"></img> <a
+								href="#" class="btn_nouveautés"> Ajouter au panier </a>
+						</div>
+
+						<div class="produit_3">
+							<img src="{{ asset('bundles/machouillesite/images/CG1.jpg') }}" class="img_CG2" alt="CG1"></img> <a
+								href="#" class="btn_nouveautés"> Ajouter au panier </a>
+						</div>
+
+						<div class="produit_4">
+							<img src="{{ asset('bundles/machouillesite/images/CG1.jpg') }}" class="img_CG2" alt="CG1"></img> <a
+								href="#" class="btn_nouveautés"> Ajouter au panier </a>
+						</div>
+					</div>
+
+					<div id="avis_user">
+						<div class="zone_concept">
+							<h2 class="titre_concept">Notre concept</h2>
+							<img src="{{ asset('bundles/machouillesite/images/chewing.jpg') }}" class="concept_img" />
+
+							<h4>Les chewings-gums Machouille une référence pour les
+								petits plaisirs et pour les fins gourmets !</h4>
+                            
+                            <div class="concept_p">
+                                <p>
+                                    Délicieux en bouche, nos chewings-gums vous feront découvrir des
+                                    sensations insoupsonnés ! Vos enfants ne seront que ravis de goûters à
+                                    nos chewings-gums. 
+                                </p>
+                                
+                                <p>
+                                    Fraise, vanille, chocolat, frambroise nos saveurs sont inimaginables et 
+                                    même les plus endurcis ne seront restez impassible avec ces saveurs en bouche
+                                    
+                                </p>
+							</div>
+							<a href="#" class="btn_savoir"> En savoir plus</a>
+						</div>
+						<div class="zone_avis">
+							<div class="avis">
+								<h2 class=titre_avis>Vos avis</h2>
+								<div class="user_avis">
+									{% for object in avis %}
+									<div class="un_avis">
+										<h2> {{  object.titre | capitalize }}</h2>
+										<p> {{ object.avis }}</p>
+										<h3>
+											{{ object.nom | capitalize }}
+											<space></space>
+											note : {{ object.note }}/ 10
+										</h3>
+										<hr></hr>
+									</div>
+									{% endfor %}
+								</div>
+								<a href=" {{ path ('machouille_site_page_commentaire') }}"> Vous aussi donnez votre avis ! </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

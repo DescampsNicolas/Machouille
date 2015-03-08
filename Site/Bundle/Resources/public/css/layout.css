@@ -1,0 +1,500 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('../polices/BEBAS.ttf');
+}
+
+@font-face {
+	font-family: 'Exo_ita';
+	src: url('../polices/Exo-Italic.otf');
+}
+
+@font-face {
+	font-family: 'Quick_Light';
+	src: url('../polices/Quicksand-Light.otf');
+}
+
+@font-face {
+	font-family: 'GoodDog';
+	src: url('../polices/Mathlete-Bulky.otf');
+}
+
+@font-face {
+	font-family: 'Dancing';
+	src: url('../polices/DancingScript-Regular.otf');
+}
+
+body {
+	background-image: url("../images/fond-gris.gif");
+	background-repeat: repeat-x repeat-y;
+	margin : 0; padding : 0;
+	font-family : Calibri;
+}
+
+ul {
+	margin :0; padding : 0;
+}
+
+a {
+	text-align : none;
+	color : #000;
+	font-family : Calibri;	
+}
+
+#conteneur {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	height: auto;
+}
+
+
+
+
+/* GESTION COULEUR */
+
+.color1 {
+	width : 100%;
+	height : 4px;
+	background-color : #06244a;
+}
+
+.color2 {
+	width : 100%;
+	height : 4px;
+	background-color : #0c65d2;
+}
+
+.color3 {
+	width : 100%;
+	height : 4px;
+	background-color: #a8cfff;
+}
+
+.conteneur_color {
+	width : 100%;
+	height : 220px;
+	background-color: #6BA5E8;
+}
+
+.conteneurB_color {
+	width : 100%;
+	height : auto;
+	margin : none;
+	background-color: #93B5FF;
+
+}
+
+
+/* GESTION CONTENEUR */
+
+.partie_gauche {
+	width : 50%;
+	float : left;
+}
+
+.partie_droite {
+	width : 40.5%;
+	float: left;
+	margin-left: 20px;
+}
+
+.logo_machouilleNB {
+	position : relative;
+	left : 10px;
+	float : left;
+	top : 30px;
+}
+
+.coordonnees {
+	width:60%;
+	height: 220px;
+	float : left;
+	position : relative;
+	left : 35px;
+	bottom : 20px;
+	overflow:hidden;
+}
+
+
+/* CSS PARTIE GAUCHE */
+
+
+.titre_coord {
+	font-family : GoodDog;
+	color : #FFF;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	position: relative;
+	top : 3px;
+}
+
+.coordonnees p {
+	color: #FFF;
+	font-family: Calibri;
+	font-weight:bold;
+	word-spacing: 0px;
+	position: relative;
+	bottom : 5px;
+}
+
+.logo_fb {
+	position: relative;
+	right:10px;
+}
+
+.logo_google {
+	position: relative;
+	right: 5px;
+}
+
+
+/* PARTIE DROITE */
+
+.partie_droite h1 {
+	font-family : GoodDog;
+	color : #FFF;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	position: relative;
+	bottom : 17px;
+}
+
+#menu_footer li  {
+	display : inline-block;
+	color : #FFF;
+	font-family : Calibri;
+}
+
+#menu_footer a {
+	text-decoration: none;
+	color: #FFF;
+	font-weight : 400;
+	-webkit-transition: all 0.5 ease-out; /*compatibilité chrome*/
+	-moz-transition: all 0.3s ease-out; /*compatibilité firefox*/
+	-o-transition: all 0.3s ease-out; /*compatibilité opéra*/
+	transition: all 0.3s ease-out; /* Autre navigateur */
+}
+
+.mangerbouger {	
+	margin-left : 150px;
+}
+
+#menu_footer a:hover {
+	color : #193AFF;
+}
+
+/* POSITION */
+section #position {
+	font-family: Calibri;
+	margin-top : 15px;
+	margin-bottom : 15px;
+	width: 100%;
+	height: 20px;
+	background: #f5f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3
+		80%, #f5f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f6f6),
+		color-stop(21%, #dbdce2), color-stop(49%, #b8bac6),
+		color-stop(80%, #dddfe3), color-stop(100%, #f5f6f6));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%,
+		#dddfe3 80%, #f5f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3
+		80%, #f5f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3
+		80%, #f5f6f6 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3
+		80%, #f5f6f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6',
+		endColorstr='#f5f6f6', GradientType=0); /* IE6-9 */
+	border: 2px outset;
+	border-radius: 5px;
+	overflow : hidden;
+}
+
+section #position .img_fleche {
+	position: relative;
+	top: 7px;
+}
+
+section #position .accueil {
+	width:51px;
+	font-family: Calibri;
+	text-decoration: none;
+	color: #000;
+	position: relative;
+	bottom: 2px;
+	left: 5px;
+	float: left;
+	font-style: weight;
+}
+
+section #position .plan_site {
+	width:100px;
+	font-family: Calibri;
+	text-decoration: none;
+	color: #000;
+	position: relative;
+	bottom: 2px;
+	left: 5px;
+	float: left;
+	font-style: weight;
+}
+
+
+section #position a:hover {
+	color:  #FF3C67;
+	font-style: weight;
+}
+
+section #position h1 {
+	width : 90px;
+	font-size: 15px;
+	float: left;
+	position: relative;
+	bottom: 13px;
+	left: 5px;
+	font-family: Calibri;
+}
+
+section #position p {
+	width : 20%;
+	float: left;
+}
+
+
+/** test **/
+
+
+/* line 1, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+  font-size: 16px; }
+
+
+/* line 3, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+a {
+  text-decoration: none; }
+
+/**  COULEUR **/
+/* line 8, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.color1 {
+  width: 100%;
+  height: 4px;
+  background-color: #06244a; }
+
+/* line 14, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.color2 {
+  width: 100%;
+  height: 4px;
+  background-color: #0c65d2; }
+
+/* line 20, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.color3 {
+  width: 100%;
+  height: 4px;
+  background-color: #a8cfff; }
+
+/* line 26, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.color4 {
+  background-color: #6BA5E8; }
+
+/* line 30, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.container {
+  margin-left: 10%;
+  margin-right: 10%; }
+
+/** Titre + Logo **/
+/* line 38, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.header--logo {
+  padding: 20px;
+  width: 65%;
+  float: left; }
+  /* line 42, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+  .header--logo img, .header--logo h1 {
+    display: inline-block; }
+  /* line 46, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+  .header--logo h1 {
+    vertical-align: middle;
+    position: relative;
+    font-family : Dancing;
+    font-size : 35px;
+    bottom: 15px; }
+
+/* line 53, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.header--client {
+  width: 31%;
+  height: 100%;
+  float: right; }
+  /* line 58, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+  .header--client .header--account, .header--client .header--panier {
+    display: inline-block; }
+  /* line 62, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+  .header--client .header--account {
+    float: left;
+    margin-top: 26px;
+    margin-left: 30px; }
+    /* line 66, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+    .header--client .header--account a {
+      font-family : Dancing;
+       font-size : 20px;
+       font-weight : bold;
+      color: #000; }
+      /* line 70, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+      .header--client .header--account a:before {
+        content: url('../images/Icone/round58.png');
+        position: relative;
+        top: 30px;
+        margin-right: 10px; }
+  /* line 80, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+  .header--client .header--panier {
+    float: right; }
+    /* line 82, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+    .header--client .header--panier a {
+      font-family : Dancing;
+       font-size : 20px;
+       font-weight : bold;
+
+      color: #000;
+      position: relative;
+      bottom: 8px; }
+      /* line 88, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+      .header--client .header--panier a:before {
+        content: url('../images/Icone/shopping10.png');
+        position: relative;
+        top: 34px;
+        margin-right: 10px; }
+
+/** MENU **/
+/* line 103, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.header--menu {
+  background-color: #6BA5E8;
+  height: 25px;
+  padding: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6); }
+  /* line 109, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+  .header--menu #menu {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+    margin-left: 13%; }
+    /* line 116, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+    .header--menu #menu li {
+      margin-right: 70px;
+      font-size: 17px;
+      display: inline-block; }
+      /* line 121, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+      .header--menu #menu li .main {
+       font-family : Dancing;
+       font-size : 20px;
+       font-weight : bold;
+        color: #12497D; }
+      /* line 124, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+      .header--menu #menu li .main:hover {
+        border-bottom: 3px solid #12497D; }
+
+/* MENU */
+/* line 137, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+#menu, #menu ul {
+  list-style: none;
+  padding: 0;
+  margin-right: 20px; }
+
+/* line 144, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.drapeau {
+  position: relative;
+  right: 5px;
+  top: 3px; }
+
+/* line 150, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.drapeau_gb {
+  position: relative;
+  right: 10px;
+  top: 3px; }
+
+/* SOUS LISTE */
+/* line 158, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+.test {
+  color: #12497D;
+  display: block;
+  width: 150px;
+  text-align: center;
+  line-height: 45px;
+  position: relative;
+  top: 2px;
+  font-family : Dancing;
+  right: 20px;
+  font-size : 20px;
+  font-weight : bold;
+  background-color: #6BA5E8;
+  z-index: 10; }
+  /* line 170, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+  .test:hover {
+    text-decoration: underline; }
+
+/* line 175, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+#menu li ul {
+  position: absolute;
+  /* Position absolue */
+  left: -999em;
+  /* Hop, on envoie loin du champ de vision */ }
+
+/* line 180, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+#menu li:hover ul ul, #menu li.sfhover ul ul {
+  left: -999em;
+  /* On expédie les sous-sous-listes hors du champ de vision */ }
+
+/* line 187, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul {
+  left: auto;
+  /* Repositionnement normal */
+  min-height: 0;
+  /* Corrige un bug sous IE */ }
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+/* line 197, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+html > body #menu li {
+  border-right: 1px solid transparent;
+  /* on met une bordure transparente à droite de chaque élément */ }
+
+/* line 202, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+#menu li ul {
+  position: absolute;
+  /* Position absolue */
+  width: 144px;
+  /* Largeur des sous-listes */
+  left: -999em;
+  /* Hop, on envoie loin du champ de vision */ }
+
+/* line 208, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+#menu li ul li {
+  /* pour ie qui ne reconnaît pas "transparent" (comme précédemment) */
+  border-top: 1px solid #3B6DBF;
+  /* on met une bordure blanche en haut de chaque élément d'une sous-liste */ }
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+/* line 215, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+html > body #menu li ul li {
+  border-top: 1px solid transparent;
+  /* on met une bordure transparente en haut de chaque élément */ }
+
+/* line 220, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+#menu li ul ul {
+  margin: -22px 0 0 304px;
+  /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+  /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+  border-left: 1px solid #3B6DBF;
+  /* Petite bordure à gauche pour ne pas coller ... */ }
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+/* line 229, C:/Users/DiDiER/Desktop/Developpement WEB/Machouuille/css/header.scss */
+html > body #menu li ul ul {
+  border-left: 1px solid transparent;
+  /* on met une bordure transparente sur la gauche de chaque élément */ }
+
+/*# sourceMappingURL=header.css.map */
+

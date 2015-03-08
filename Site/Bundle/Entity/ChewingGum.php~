@@ -1,0 +1,235 @@
+<?php
+
+namespace Machouille\Site\Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ChewingGum
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Machouille\Site\Bundle\Entity\ChewingGumRepository")
+ */
+class ChewingGum
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * 
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="designation", type="string", length=255)
+     */
+    private $designation;
+
+    /**
+     * @var string
+     * @ORM\Id
+     * @ORM\Column(name="reference", type="string", length=6)
+     */
+    private $reference;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prix", type="integer")
+     */
+    private $prix;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="quantite", type="integer")
+     */
+    private $quantite;
+
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="TypeChewing", inversedBy="chewing", cascade={"remove"})
+     * @ORM\JoinColumn(name="type_id", referencedColumnName="type_id")
+     */
+    protected $type;
+     
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Gout", inversedBy="chewing")
+     * @ORM\JoinTable(name="chewing_gout",
+     * 	joinColumns={@ORM\JoinColumn(name="chewing_ref", referencedColumnName="reference")},
+     * 	inverseJoinColumns={@ORM\JoinColumn(name="gout_ref", referencedColumnName="gout_id")}
+     * )			
+     */
+    protected $gout;
+    
+
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set designation
+     *
+     * @param string $designation
+     * @return ChewingGum
+     */
+    public function setDesignation($designation)
+    {
+        $this->designation = $designation;
+
+        return $this;
+    }
+
+    /**
+     * Get designation
+     *
+     * @return string 
+     */
+    public function getDesignation()
+    {
+        return $this->designation;
+    }
+
+    /**
+     * Set reference
+     *
+     * @param string $reference
+     * @return ChewingGumGum
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Get reference
+     *
+     * @return string 
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param integer $prix
+     * @return ChewingGum
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return integer 
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * Set quantite
+     *
+     * @param integer $quantite
+     * @return ChewingGum
+     */
+    public function setQuantite($quantite)
+    {
+        $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    /**
+     * Get quantite
+     *
+     * @return integer 
+     */
+    public function getQuantite()
+    {
+        return $this->quantite;
+    }
+
+    /**
+     * Set type
+     *
+     * @param \Machouille\Site\Bundle\Entity\TypeChewing $type
+     * @return ChewingGum
+     */
+    public function setType(\Machouille\Site\Bundle\Entity\TypeChewing $type = null)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Machouille\Site\Bundle\Entity\TypeChewing 
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->gout = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add gout
+     *
+     * @param \Machouille\Site\Bundle\Entity\Gout $gout
+     * @return ChewingGum
+     */
+    public function addGout(\Machouille\Site\Bundle\Entity\Gout $gout)
+    {
+        $this->gout[] = $gout;
+
+        return $this;
+    }
+
+    /**
+     * Remove gout
+     *
+     * @param \Machouille\Site\Bundle\Entity\Gout $gout
+     */
+    public function removeGout(\Machouille\Site\Bundle\Entity\Gout $gout)
+    {
+        $this->gout->removeElement($gout);
+    }
+
+    /**
+     * Get gout
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getGout()
+    {
+        return $this->gout;
+    }
+}

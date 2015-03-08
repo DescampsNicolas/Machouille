@@ -1,0 +1,79 @@
+machouille_site_accueil:
+    path:     /Machouille/accueil
+    defaults: { _controller: MachouilleSiteBundle:Machouille:index }
+
+machouille_site_page_inscription:
+    path:     /Machouille/inscription
+    defaults: { _controller: MachouilleSiteBundle:Machouille:pageInscription }
+ 
+machouille_site_page_connexion:
+    path:     /Machouille/connexion-utilisateur
+    defaults: { _controller: MachouilleSiteBundle:Machouille:pageConnexion }
+    
+machouille_site_page_commentaire:
+    path:     /Machouille/avis-temoignages
+    defaults: { _controller: MachouilleSiteBundle:Machouille:pageCommentaire }
+
+machouille_site_plan:
+    path:     /Machouille/plan-du-site
+    defaults: { _controller: MachouilleSiteBundle:Machouille:plan}
+ 
+machouille_site_inscription:
+    path:     /Machouille/inscription-utilisateur
+    defaults: { _controller: MachouilleSiteBundle:Machouille:inscription }
+
+machouille_site_avis:
+    path:     /Machouille/ajout-avis
+    defaults: { _controller: MachouilleSiteBundle:Machouille:ajoutAvis }
+    
+machouille_site_verif_ident :
+    path :    /Machouille/verification
+    defaults: { _controller: MachouilleSiteBundle:Machouille:verifIdent }
+
+machouille_verif_user: 
+    path :    /Machouille/verification-connexion
+    defaults: { _controller: MachouilleSiteBundle:Machouille:verifUser }
+    
+machouille_site_page_connexion_erreur:
+    path:     /Machouille/erreur-connexion
+    defaults: { _controller: MachouilleSiteBundle:Machouille:pageConnexionErreur }
+    
+machouille_site_page_fruites: 
+   path:      /Machouille/chewing-gum/gamme-fruité
+   defaults: { _controller: MachouilleSiteBundle:Machouille:pageChewingFruité }
+   
+machouille_site_page_panier:
+    path:     /Machouille/panier
+    defaults: { _controller: MachouilleSiteBundle:Panier:panier }
+    
+machouille_ajout_article:
+    path:     /Machouille/panier/ajouter/{id}
+    defaults: { _controller: MachouilleSiteBundle:Panier:ajouter}
+ 
+machouille_supprimer_article:
+    path:     /Machouille/panier/supprimer/{id}
+    defaults: { _controller: MachouilleSiteBundle:Panier:supprimer }
+    
+machouille_detail_article:
+    path:     /Machouille/chewing-gum/article/detail/{id}
+    defaults: { _controller: MachouilleSiteBundle:Panier:pageDetail }
+    
+machouille_site_livraison:
+    path:     /Machouille/livraison
+    defaults: { _controller: MachouilleSiteBundle:Panier:validation }
+    
+machouille_site_modif_adresse:
+    path:     /Machouille/Compte/Modification
+    defaults: { _controller: MachouilleSiteBundle:Machouille:adresse }
+    
+machouille_site_page_paiement:
+    path:     /Machouille/Paiement
+    defaults: { _controller: MachouilleSiteBundle:Machouille:paiement }
+    
+machouille_site_page_recherche:
+    path:     /Machouille/chewing-gum
+    defaults: { _controller: MachouilleSiteBundle:Machouille:pageRecherche }
+
+machouille_site_recherche:
+    path:     /Machouille/chewing-gum/search
+    defaults: { _controller: MachouilleSiteBundle:Machouille:search }

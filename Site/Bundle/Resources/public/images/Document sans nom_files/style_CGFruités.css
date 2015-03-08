@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('../polices/BEBAS.ttf');
+}
+
+@font-face {
+	font-family: 'Exo_ita';
+	src: url('../polices/Exo-Italic.otf');
+}
+
+@font-face {
+	font-family: 'Quick_Light';
+	src: url('../polices/Quicksand-Light.otf');
+}
+
+
+
+
+body {
+	background-color : #F5EEF4;
+}	
+
+#conteneur {
+	margin-left : auto;
+	margin-right: auto;
+	position: relative; 
+	bottom: 4em;
+	width: 1200px;
+	height: auto;
+	background-color: #F5EEF4;
+}
+
+header #banniere_conteneur {
+	height : 300px;
+	position: relative;
+	bottom : 20px;
+}
+
+header #menu1 {
+	background-color : #3B6DBF;
+}
+
+header #menu1 li {
+	display : inline-block;
+	padding: 15px;
+}
+
+header #menu1 a {
+	display : block;
+	width : 100px;
+	color:#FFF;
+	text-decoration: none;
+	font-family: Bebas;
+}
+
+header #banniere {
+	background-color : #4497DE;
+	height: 150px;
+	position: relative;
+	bottom : 20px;
+}
+
+header #banniere .logo_machouille {
+	position : relative; 
+	top : 5px;
+	right: 15px;
+}
+
+header #banniere h1 {
+	font-family : Bebas;
+	position: relative;
+	bottom: 3.5em;
+	left: 5.5em;
+}
+
+header #zone_user {
+	float: right;
+}
+
+header #menu2 {
+	background-color : #3B6DBF;
+	position : relative;
+	width: 100%;
+	bottom: 7em;
+	height: 50px;
+}
+
+header #menu2 li {
+	display : inline-block;
+	padding: 25px;
+	position: relative;
+	left : 41em;
+	bottom : 10px;
+}
+
+header #menu2 a {
+	display : block;
+	width : 150px;
+	color:#FFF;
+	text-decoration: none;
+	font-family: Bebas;
+	background-color: #4497DE;
+	text-align: center;
+	height: 25px;
+	border-radius : 5px;
+}
+
+header #zone_user {
+	position : relative;
+	bottom: 19em;
+	right: 5em;
+}
+
+header a.titre_home {
+	font-family : Bebas;
+	color: #FFF;
+	text-decoration:none;
+	font-size: 18px;
+	position: relative;
+	bottom: 30px;
+	right: 35px;
+}
+
+header a.logo_home {
+	position : relative;
+	top : 10px;
+}
+
+header a.logo_panier {
+	position : relative;
+	bottom : 13px;
+}
+
+header a.titre_panier {
+	font-family : Bebas;
+	color: #FFF;
+	text-decoration:none;
+	font-size: 18px;
+	position: relative;
+	bottom: 30px;
+	left: 10px;
+}
+
+/* POSITION */
+
+section #position {
+	background: #f5f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f6f6), color-stop(21%,#dbdce2), color-stop(49%,#b8bac6), 	color-stop(80%,#dddfe3), color-stop(100%,#f5f6f6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+	border: 2px outset;
+	border-radius : 5px;
+}
+
+
+section #position .img_fleche {
+	position : relative;
+	top : 7px;
+}
+
+section #position a {
+	font-family : Calibri;
+	text-decoration: none;
+	color: #000;
+	position: relative;
+	bottom : 3px;
+	left : 5px;
+}
+
+#description_fruités h1 {
+	font-family : Quick_Light;
+}
+
+#conteneur_fruités {
+	position: relative;
+	top :10px;
+	width : 100%;
+	height: 200px;
+	background-color: #967EBA;
+	border-radius : 8px;
+}
+
+.zone_img {
+	width : 30%;
+	float: left;
+}
+
+.zone_img img {
+	position : relative; 
+	left: 100px;
+	top : 45px;
+}
+
+.descrip_fruités {
+	width : 50%;
+	float: left;
+}
+
+.descrip_fruités p {
+	text-align: left;
+	font-family: Calibri;
+	position: absolute;
+	bottom : 105px;
+	left: 361px;
+}
+
+
+#titre_CG {
+	width : 100%;
+	position: relative;
+	top : 40px;
+	left : 6em;
+	height: auto;
+}
+
+#titre_CG h1 {
+	font-family : Bebas;
+	font-size: 16px;
+	color: #1D273A;
+}
+
+.titre_nom {
+	width : 20%;
+	float: left;
+	text-align: center;
+	display:block;
+	background-color: #B0AEF5;
+	border-style: groove;
+	border-color: #9896D4;
+}
+
+.titre_description {
+	float: left;
+	width : 30%;
+	text-align: center;
+	display:block;
+	background-color: #B0AEF5;
+	border-style: groove;
+	border-color: #9896D4;
+}
+
+.titre_prix {
+	float: left;
+	width : 5%;
+	text-align: center;
+	display:block;
+	background-color: #B0AEF5;
+	border-style: groove;
+	border-color: #9896D4;
+}
+
+
+.titre_quantité {
+	float: left;
+	width : 10%;
+	text-align: center;
+	display:block;
+	background-color: #B0AEF5;
+	border-style: groove;
+	border-color: #9896D4;
+}
+
+.titre_icone {
+	float: left;
+	width : 15%;
+	text-align: center;
+	display:block;
+	background-color: #B0AEF5;
+	border-style: groove;
+	border-color: #9896D4;
+}
+
+
+
+
+
+#CG {
+	width : 100%;
+	height: auto;
+	float: left;
+}

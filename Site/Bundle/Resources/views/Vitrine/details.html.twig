@@ -1,0 +1,42 @@
+{% extends "::machouille_layout.html.twig" %} {% block stylesheets %} {#
+On charge le CSS #}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/detail.css') }}" />
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouillesite/css/layout.css') }}" />
+
+{% endblock %} {% block title %} Machouille - Detail {% endblock %}
+
+{% block position %}
+<span> >> Detail  </span>
+{% endblock %} 
+
+{% block body %}
+	<div id="body2">
+			<div id="conteneur">
+                <div class="row">
+                   
+                    <div class="col-xs-10">
+                        <img src="{{ asset('bundles/machouillesite/images/detail_CG.jpg') }}" alt="" class="img_CG">
+                        <div class="description_produit">
+                            <h3> {{ article.reference }} </h3>
+                            <span>Type</span><br>
+                            <span> Différents goûts : {{ article.designation }} </span><br>
+                            <span><strong>Prix :</strong> {{ article.prix | number_format(2, ',' ,'') }} €/unité</span>
+                            <form action=" {{ path ('machouille_ajout_article',{ 'id' : article.reference })  }}" method="get">
+                                <select name="qte">
+                            	{% for i in 1..10 %}
+                                <option value="{{ i }}"> {{ i }}</option>
+                            	{% endfor %}
+                            	</select><br>
+
+                                <button> Ajouter au panier</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            <div style="clear:both"></div>
+            </div>
+       </div>
+{% endblock %}

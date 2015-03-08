@@ -1,0 +1,56 @@
+#body2 {
+	background-image : url('../images/gris2.jpg');
+	background-repeat : repeat-x repeat-y;
+	border-top : 2px solid #aaa;
+	height: auto;
+    font-family: Calibri;
+}
+
+
+.description_produit {
+    width: 30%;
+    padding: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #CCC;
+    background-color: #CCC;
+    float: right;
+    margin-top: 20px;
+}
+
+.description_produit h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.description_produit button {
+    margin-left: 5px;
+    margin-top: 15px;
+    border-radius:5%;
+    text-decoration: underline;
+    width: 240px;
+    height: 70px;
+    background-color: #6BA5E8;
+    border: 2px solid #6BA5E8;
+    font-family: Calibri;
+}
+
+
+.description_produit select {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 50px;
+}
+.description_produit span {
+    padding: 5px;
+}
+.img_CG {
+    width: 35%;
+    float: left;
+    margin-left: 15%;
+}
+
+
+
+.col-xs-10 {
+    padding: 40px;
+}
